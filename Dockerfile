@@ -8,6 +8,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
         nodejs \
         yarn \
         wget \
-    && apt-get -qyy autoremove \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get -qyy clean
+        jq && \
+    apt-get -qyy autoremove && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get -qyy clean
